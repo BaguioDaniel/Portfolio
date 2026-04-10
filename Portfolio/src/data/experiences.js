@@ -1,3 +1,7 @@
+import resume from '../assets/Daniel Jeremiah Baguio.pdf';
+import aws_certificate from '../assets/AWS Cloud Practitioner Essentials.pdf';
+import chatgpt_certificate from '../assets/ChatGPT Certification.jpg';
+
 export const experiences = [
   {
     id: "amdocs",
@@ -71,7 +75,7 @@ export const personalInfo = {
   email: "work.danielbaguio@gmail.com",
   linkedin: "https://www.linkedin.com/in/daniel-jeremiah-baguio/",
   github: "https://github.com/BaguioDaniel",
-  resume: "Daniel Jeremiah Baguio.pdf"
+  resume: resume
 };
 
 export const projects = [
@@ -86,4 +90,9 @@ export const techStack = {
   frontend: ["JavaScript", "React", "HTML/CSS"],
   backend: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Postman", "C#"],
   tools: ["Git", "Generative AI", "AWS", "Zapier"]
+};
+
+export const certifications = {
+  name: ["AWS Cloud Practitioner Essentials", "ChatGPT Complete Guide: Learn Midjourney, ChatGPT 4 & More"],
+  link: [aws_certificate, chatgpt_certificate]
 };

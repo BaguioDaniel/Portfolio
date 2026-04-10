@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
-import { experiences, personalInfo, projects, techStack } from '../data/experiences'
+import { experiences, personalInfo, projects, techStack, certifications } from '../data/experiences'
 import CanvasBackground from '../components/CanvasBackground'
 
 export default function Home() {
@@ -85,7 +85,7 @@ export default function Home() {
 
           {/* TECH STACKS SECTION */}
           <section className="tech-stacks">
-            <h2>Tech Stack</h2>
+            <h2>Tech Stacks and Certifications</h2>
             <div className="skills-category">
               <h4>Frontend</h4>
               <div className="skill-tags">
@@ -107,6 +107,14 @@ export default function Home() {
               <div className="skill-tags">
                 {techStack.tools.map((skill, idx) => (
                   <span key={idx} className="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            <div className="skills-category">
+              <h4>Certifications</h4>
+              <div className="skill-tags">
+                {certifications.name.map((cert, idx) => (
+                  <a key={idx} href={certifications.link[idx]} className="skill-tag" target="_blank" rel="noopener noreferrer"> {cert} </a>
                 ))}
               </div>
             </div>
