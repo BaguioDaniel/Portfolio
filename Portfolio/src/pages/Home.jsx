@@ -38,6 +38,10 @@ export default function Home() {
           <section className="experiences">
             <h2>Work Experience Overview</h2>
 
+            <Link to="/timeline" className="timeline-button">
+              My Professional Journey →
+            </Link>
+
             <div className="filter-buttons">
               <button 
                 className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
