@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/ChatWidget.css'
+import { ChatController } from '../controllers/ChatController'
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +14,12 @@ export default function ChatWidget() {
   ])
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [conversationHistory, setConversationHistory] = useState([])
+
+  // Initialize conversation history on mount
+  useEffect(() => {
+    setConversationHistory(ChatController.initializeConversation())
+  }, [])
 
   const handleSendMessage = async (e) => {
     e.preventDefault()
@@ -29,32 +36,40 @@ export default function ChatWidget() {
     setInputValue('')
     setIsLoading(true)
 
-    // TODO: Call your OpenAI backend API here
-    // Example: const response = await fetch('/api/chat', { method: 'POST', body: JSON.stringify({ message: inputValue }) })
-    
     try {
-      // Placeholder for API call - replace with actual OpenAI endpoint
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: inputValue })
-      })
-      
-      if (response.ok) {
-        const data = await response.json()
+      // Process message through ChatController
+      const result = await ChatController.processMessage(
+        inputValue,
+        conversationHistory
+      )
+
+      if (result.success) {
+        // Update conversation history
+        setConversationHistory(result.conversationHistory)
+
+        // Add bot response
         const botMessage = {
           id: messages.length + 2,
-          text: data.reply,
+          text: result.reply,
           sender: 'bot',
           timestamp: new Date()
         }
         setMessages(prev => [...prev, botMessage])
+      } else {
+        // Handle error response
+        const errorMessage = {
+          id: messages.length + 2,
+          text: result.reply,
+          sender: 'bot',
+          timestamp: new Date()
+        }
+        setMessages(prev => [...prev, errorMessage])
       }
     } catch (error) {
       console.error('Error sending message:', error)
       const errorMessage = {
         id: messages.length + 2,
-        text: "Sorry, I couldn't process your message. Please try again later.",
+        text: "Sorry, I couldn't process your message. Please make sure the backend API is running.",
         sender: 'bot',
         timestamp: new Date()
       }
