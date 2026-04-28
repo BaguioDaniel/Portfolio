@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </div>
             <div className="skills-category">
-              <h4>Certifications</h4>
+              <h4>Proof of Certificaition</h4>
               <div className="skill-tags">
                 {certifications.name.map((cert, idx) => (
                   <a key={idx} href={certifications.link[idx]} className="skill-tag" target="_blank" rel="noopener noreferrer"> {cert} </a>

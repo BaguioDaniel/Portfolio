@@ -6,7 +6,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi! I'm your AI assistant. Feel free to ask me anything about this portfolio!",
+      text: "Hi! I'm your AI assistant. Feel free to ask me anything about this portfolio! However as of now, I am still under development.",
       sender: 'bot',
       timestamp: new Date()
     }
