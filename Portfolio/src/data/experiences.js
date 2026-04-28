@@ -71,7 +71,7 @@ export const experiences = [
 export const personalInfo = {
   name: "Daniel Jeremiah Baguio",
   title: "Software Engineer",
-  bio: "I am a Software Engineer with experience in web application development, system enhancement, and e-commerce platforms. Strong background in building scalable features, improving system performance, and collaborating across teams to deliver production-ready solutions. Experienced in .NET, JavaScript, Shopify (Liquid), and modern frontend development.",
+  bio: "I am a Software Engineer with experience in full-stack web application development, system enhancement, and e-commerce platforms. Strong background in building scalable features, optimizing performance, and delivering end-to-end solutions from architecture to deployment. Experienced in .NET, C#, SQL, JavaScript, Shopify (Liquid), and modern frontend development.",
   email: "work.danielbaguio@gmail.com",
   linkedin: "https://www.linkedin.com/in/daniel-jeremiah-baguio/",
   github: "https://github.com/BaguioDaniel",
