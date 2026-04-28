@@ -27,10 +27,10 @@ export default function Home() {
             <p className="title">{personalInfo.title}</p>
             <p className="bio">{personalInfo.bio}</p>
             <div className="contact-links">
-              <a href={`mailto:${personalInfo.email}?subject=Let's%20Connect`}>Email</a>
+              <a href={`mailto:${personalInfo.email}?subject=Let's Connect`} rel="noopener noreferrer">Email</a>
               <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href={personalInfo.resume} target="_blank" download className="resume-btn">Resume</a>
+              <a href={personalInfo.resume} target="_blank" download="Daniel Jeremiah Baguio.pdf" className="resume-btn">Resume</a>
             </div>
           </section>
 
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </div>
             <div className="skills-category">
-              <h4>Certifications</h4>
+              <h4>Proof of Certification</h4>
               <div className="skill-tags">
                 {certifications.name.map((cert, idx) => (
                   <a key={idx} href={certifications.link[idx]} className="skill-tag" target="_blank" rel="noopener noreferrer"> {cert} </a>

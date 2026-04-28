@@ -1,6 +1,6 @@
 import resume from '../assets/Daniel Jeremiah Baguio.pdf';
 import aws_certificate from '../assets/AWS Cloud Practitioner Essentials.pdf';
-import chatgpt_certificate from '../assets/ChatGPT Certification.jpg';
+import chatgpt_certificate from '../assets/ChatGpt Certification.jpg';
 
 export const experiences = [
   {
@@ -18,10 +18,10 @@ export const experiences = [
     role: "Software Engineer",
     impact: "Improved user experience, productivity, and system performance",
     achievements: [
-      "Enhanced an existing web-based system by implementing new features, improving user productivity by 15% and streamlining daily operations.",
-      "Built and tested 5 features in simulated virtual machine environments to replicate production data scenarios, improving testing reliability",
-      "Collaborated with cross-functional teams, across 4 different projects, to deploy new system features and updates in production environments",
-      "Contributed to system stability and performance through structured testing and debugging reducing discrepancies and downtime by 9%"
+      "Delivered end-to-end full-stack development enhancement owning architecture, development, testing, and development, resulting in a 15% increase in user productivity and streamlined operations ",
+      "Designed and implemented backend processes using .NET, C#, SQL, and JavaScript, continuously refining technical implementations to match evolving business requirements. ",
+      "Executed 5 production deployments throughout 2025 which included post deployment support for critical releases, and supports that lasted 6 months due to scale and impact.  ",
+      " Improved system stability and performance by reducing discrepancies and downtime by 9% through structured testing, debugging, and validation in simulated VM environments, while collaborating across 4 cross-functional project teams. "
     ]
   },
   {
@@ -71,7 +71,7 @@ export const experiences = [
 export const personalInfo = {
   name: "Daniel Jeremiah Baguio",
   title: "Software Engineer",
-  bio: "I am a Software Engineer with experience in web application development, system enhancement, and e-commerce platforms. Strong background in building scalable features, improving system performance, and collaborating across teams to deliver production-ready solutions. Experienced in .NET, JavaScript, Shopify (Liquid), and modern frontend development.",
+  bio: "I am a Software Engineer with experience in full-stack web application development, system enhancement, and e-commerce platforms. Strong background in building scalable features, optimizing performance, and delivering end-to-end solutions from architecture to deployment. Experienced in .NET, C#, SQL, JavaScript, Shopify (Liquid), and modern frontend development.",
   email: "work.danielbaguio@gmail.com",
   linkedin: "https://www.linkedin.com/in/daniel-jeremiah-baguio/",
   github: "https://github.com/BaguioDaniel",
