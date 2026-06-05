@@ -68,6 +68,11 @@
   padding-top: 0.5rem;
 }
 
+.timeline-content {
+  text-align: center;
+  flex: 1;
+}
+
 .timeline-content h3 {
   font-size: 1.3rem;
   color: #ffffff;

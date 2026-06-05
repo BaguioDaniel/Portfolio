@@ -270,6 +270,37 @@ body {
     box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
 }
 
+/* CERTIFICATION LINKS */
+a.skill-tag {
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(0, 212, 255, 0.15);
+    border: 2px solid #00d4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+a.skill-tag::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #00d4ff;
+    transition: left 0.3s ease;
+}
+
+a.skill-tag:hover {
+    background: rgba(0, 212, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+a.skill-tag:hover::after {
+    left: 0;
+}
+
 /* PROJECTS SECTION */
 .projects {
     margin-bottom: 60px;
