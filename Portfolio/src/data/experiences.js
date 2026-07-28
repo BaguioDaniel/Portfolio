@@ -1,6 +1,7 @@
 import resume from '../assets/Daniel Jeremiah Baguio.pdf';
 import aws_certificate from '../assets/AWS Cloud Practitioner Essentials.pdf';
 import chatgpt_certificate from '../assets/ChatGpt Certification.jpg';
+import profile_picture from '../assets/PFP.JPG';
 
 export const experiences = [
   {
@@ -18,10 +19,12 @@ export const experiences = [
     role: "Software Engineer",
     impact: "Improved user experience, productivity, and system performance",
     achievements: [
-      "Delivered end-to-end full-stack development enhancement owning architecture, development, testing, and development, resulting in a 15% increase in user productivity and streamlined operations ",
-      "Designed and implemented backend processes using .NET, C#, SQL, and JavaScript, continuously refining technical implementations to match evolving business requirements. ",
-      "Executed 5 production deployments throughout 2025 which included post deployment support for critical releases, and supports that lasted 6 months due to scale and impact.  ",
-      " Improved system stability and performance by reducing discrepancies and downtime by 9% through structured testing, debugging, and validation in simulated VM environments, while collaborating across 4 cross-functional project teams. "
+      "Built a QR-based self-registration flow (ASP.NET MVC) for a Philippine telecom client, automating profile population via internal APIs and reducing manual data entry for field operations. ",
+      "Developed an address resolution tool integrating Google Maps Geocoding API to capture accurate coordinates and reduce field installation errors across service locations.",
+      "Designed and delivered end-to-end full-stack features using .NET, C#, SQL, and JavaScript, improving user productivity and streamlining daily operations. ",
+      "Executed 5 production deployments with post-deployment support spanning up to 6 months, coordinating across 4 cross-functional project teams.",
+      "Contributed to system stability and performance through structured testing and debugging in simulated VM environments, reducing discrepancies and downtime.",
+      "Supported backend development using .NET, C#, and SQL, continuously aligning technical implementations with evolving business requirements."
     ]
   },
   {
@@ -39,10 +42,9 @@ export const experiences = [
     role: "Shopify Developer",
     impact: "Enhanced store usability and increased conversion rates by 20%",
     achievements: [
-      "Translated design mockups into fully responsive Shopify themes using Liquid, HTML, CSS, and JavaScript, ensuring cross-device compatibility",
-      "Developed custom Shopify features and reusable UI components that enhanced store usability and increased conversion rates by 20%",
-      "Optimized site performance by 20% and implemented app integrations to streamline client operations",
-      "Tested and evaluated third-party Shopify applications and implemented inventory, merchandising, and marketing workflows"
+      "Translated design mockups into fully responsive Shopify themes using Liquid, HTML, CSS, and JavaScript, ensuring cross-device compatibility.",
+      "Built custom features and reusable UI components that improved store usability and increased conversion rates. ",
+      "Optimized site performance and integrated third-party apps (e.g., Bundler, Microsoft Clarity) to support data-driven merchandising workflows."
     ]
   },
   {
@@ -60,10 +62,7 @@ export const experiences = [
     role: "Web Developer",
     impact: "Improved code maintainability and documentation",
     achievements: [
-      "Assisted in modernizing legacy systems by improving UI structure and backend code readability",
-      "Applied coding best practices to improve maintainability of existing systems",
-      "Authored technical documentation to improve knowledge transfer and codebase understanding",
-      "Enhanced onboarding efficiency and knowledge transfer processes"
+      "Modernized legacy systems by improving UI structure and backend code readability, and authored technical documentation to support knowledge transfer." 
     ]
   }
 ];
@@ -75,7 +74,8 @@ export const personalInfo = {
   email: "work.danielbaguio@gmail.com",
   linkedin: "https://www.linkedin.com/in/daniel-jeremiah-baguio/",
   github: "https://github.com/BaguioDaniel",
-  resume: resume
+  resume: resume,
+  profilePicture: profile_picture
 };
 
 export const projects = [
@@ -83,6 +83,11 @@ export const projects = [
     title: "Tracker Management System",
     description: "A web-based application for managing and tracking projects and tasks efficiently.",
     link: "https://github.com/BaguioDaniel/TrackerManager"
+  },
+  {
+    title: "Able Philippines E-commerce Store",
+    description: "A Shopify-based e-commerce platform for Able Philippines, featuring custom themes and integrations to enhance user experience and sales.",
+    link: "https://ableapparel.co"
   }
 ];
 

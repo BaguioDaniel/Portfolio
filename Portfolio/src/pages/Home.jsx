@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
 import { experiences, personalInfo, projects, techStack, certifications } from '../data/experiences'
+import profilePicture from '../assets/PFP.JPG'
 import CanvasBackground from '../components/CanvasBackground'
 
 export default function Home() {
@@ -23,15 +24,24 @@ export default function Home() {
         <div className="container">
           {/* PERSONAL INFORMATION SECTION */}
           <section className="personal-info">
-            <h1>{personalInfo.name}</h1>
-            <p className="title">{personalInfo.title}</p>
-            <p className="bio">{personalInfo.bio}</p>
-            <div className="contact-links">
-              <a href={`mailto:${personalInfo.email}?subject=Let's Connect`} rel="noopener noreferrer">Email</a>
-              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href={personalInfo.resume} target="_blank" download="Daniel Jeremiah Baguio.pdf" className="resume-btn">Resume</a>
+            <div className="hero-card">
+              <div className="avatar-wrapper">
+                <img src={profilePicture} alt="Daniel Jeremiah Baguio" className="profile-image" />
+              </div>
+              <div className="hero-copy">
+                <h1>{personalInfo.name}</h1>
+                <p className="title">{personalInfo.title}</p>
+                <div className="contact-links">
+                  <a href={`mailto:${personalInfo.email}?subject=Let's Connect`} rel="noopener noreferrer">Email</a>
+                  <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href={personalInfo.resume} target="_blank" download="Daniel Jeremiah Baguio.pdf" className="resume-btn">Resume</a>
+                </div>
+              </div>
             </div>
+
+            <p className="bio">{personalInfo.bio}</p>
+            
           </section>
 
           {/* MAIN EXPERIENCES SECTION */}
@@ -126,7 +136,7 @@ export default function Home() {
 
           {/* PROJECTS SECTION */}
           <section className="projects">
-            <h2>Personal Projects</h2>
+            <h2>Projects</h2>
             {projects.map((project, idx) => (
               <div key={idx} className="project-item">
                 <h3>{project.title}</h3>

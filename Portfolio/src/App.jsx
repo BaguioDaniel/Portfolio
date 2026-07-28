@@ -13,7 +13,7 @@ function App() {
         <Route path="/experience/:slug" element={<ExperienceDetail />} />
         <Route path="/timeline" element={<Timeline />} />
       </Routes>
-      <ChatWidget />
+      {/* <ChatWidget /> */}
     </Router>
   )
 }
