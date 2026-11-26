@@ -1,0 +1,19 @@
+[build]
+  # The Vite app lives in the Portfolio/ subfolder, not at the repository root.
+  base = "Portfolio"
+  # Install from the lockfile first (including devDependencies such as Vite)
+  # so the build works even when dependencies weren't installed beforehand.
+  command = "npm ci --include=dev && npm run build"
+  # Relative to the base directory (Portfolio/dist).
+  publish = "dist"
+
+[build.environment]
+  # Vite 8, Rolldown and @rolldown/plugin-babel require Node >= 22.12.
+  NODE_VERSION = "22"
+
+# The app uses client-side routing (React Router BrowserRouter) for pages like
+# /experience/:slug and /timeline, so serve index.html for unknown paths.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
